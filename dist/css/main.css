@@ -53,6 +53,25 @@ body header .navbar .navbar-brand {
   padding-top: 0 !important;
 }
 
+body header .navbar span {
+  display: none !important;
+  position: absolute;
+  right: 35px;
+  top: 20px;
+}
+
+body header .navbar span i {
+  font-size: 22px;
+}
+
+body header .navbar .li-closed {
+  display: block;
+}
+
+body header .navbar .li-clicked {
+  display: none;
+}
+
 body header .navbar .navbar-collapse .navbar-nav {
   margin-right: 50px !important;
 }
@@ -99,6 +118,60 @@ body header .navbar .navbar-collapse .navbar-nav .nav-item .spec {
   padding-top: 15px !important;
 }
 
+body header .navbar .menutoggled {
+  right: 0 !important;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+body header .navbar .menuclosed {
+  right: -20rem !important;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+body header .navbar .plash {
+  height: 267vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -60000;
+  right: 200px;
+}
+
+body header .navbar #togglemenu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 500;
+  right: -20rem;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+}
+
+body header .navbar #togglemenu .container {
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+}
+
+body header .navbar #togglemenu .container ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+body header .navbar #togglemenu .container ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 18px 30px;
+}
+
+body header .navbar #togglemenu .container ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
 body header .first-section {
   position: relative;
 }
@@ -129,6 +202,8 @@ body header .first-section .pres h4 {
 }
 
 body header .first-section .pres div a {
+  position: relative;
+  z-index: 4000;
   text-decoration: none;
   font-family: "Lato Light";
   font-weight: 600;
@@ -281,7 +356,7 @@ body .cards-container .single-row .single-sec p {
   text-align: left;
   width: 219px;
   position: absolute;
-  bottom: 2%;
+  top: 17%;
 }
 
 body .cards-container .single-row .single-sec .p-spec {

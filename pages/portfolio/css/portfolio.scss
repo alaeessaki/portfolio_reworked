@@ -72,6 +72,21 @@ body{
                 font-weight: 600;
                 padding-top: 0 !important;
             }
+            span{
+                display: none !important;
+                position: absolute;
+                right:35px;
+                top:20px;
+                i{
+                    font-size: 22px;
+                }
+            }
+            .li-closed{
+                display:block;
+            }
+            .li-clicked{
+                display:none;
+            }
             .navbar-collapse{
                 .navbar-nav{
                     margin-right: 50px !important;
@@ -113,9 +128,57 @@ body{
                     }
                 }
             }
+            .menutoggled{
+                right:0 !important;
+                transition: right 0.5s;
+            }
+            .menuclosed{
+                right:-20rem !important;
+                transition: right 0.5s;
+            }
+            .plash{
+                height: 267vh;
+                width: 100vw; 
+                position: absolute;
+                z-index:-6000;
+                right:200px;
+            }
+            #togglemenu{
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                z-index: 800;
+                right:-20rem;
+                top: 0;
+                width: 200px;
+                height:100vh;
+                .container{
+                    padding: 0;
+                    background-color:black;
+                    height:100vh;
+                    ul{
+                        padding-left:0; 
+                        list-style-type: none;
+                        li{
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                display: block;
+                                padding: 18px 30px;
+                                &:hover{
+                                    color:black;
+                                    background-color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
         }
     }
     main{
+        position: relative;
+        transition: z-index 0.5s;
         .categories{
             .navs-list{
                 .navs-item{
@@ -157,6 +220,7 @@ body{
             }
             .modal-dialog{
                 border:1px solid black;
+                z-index:602 !important;
                 .modal-content{
                     .modal-header{
                         border:none;
@@ -226,4 +290,7 @@ body{
             }
         }
     }
+}
+.modal-backdrop.show {
+    z-index: 7;
 }

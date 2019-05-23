@@ -13,6 +13,20 @@
   src: url("../../../assets/fonts/Pattaya-Regular.ttf");
 }
 
+h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection, a::-moz-selection, p::-moz-selection, br::-moz-selection, li::-moz-selection {
+  background-color: black;
+  color: white;
+}
+
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, a::selection, p::selection, br::selection, li::selection {
+  background-color: black;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 body header {
   margin-bottom: 8rem !important;
 }
@@ -37,6 +51,25 @@ body header .navbar .navbar-brand {
   margin-left: 80px;
   font-weight: 600;
   padding-top: 0 !important;
+}
+
+body header .navbar span {
+  display: none !important;
+  position: absolute;
+  right: 35px;
+  top: 20px;
+}
+
+body header .navbar span i {
+  font-size: 22px;
+}
+
+body header .navbar .li-closed {
+  display: block;
+}
+
+body header .navbar .li-clicked {
+  display: none;
 }
 
 body header .navbar .navbar-collapse .navbar-nav {
@@ -85,6 +118,65 @@ body header .navbar .navbar-collapse .navbar-nav .nav-item .spec {
   padding-top: 15px !important;
 }
 
+body header .navbar .menutoggled {
+  right: 0 !important;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+body header .navbar .menuclosed {
+  right: -20rem !important;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+body header .navbar .plash {
+  height: 267vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -6000;
+  right: 200px;
+}
+
+body header .navbar #togglemenu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 800;
+  right: -20rem;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+}
+
+body header .navbar #togglemenu .container {
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+}
+
+body header .navbar #togglemenu .container ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+body header .navbar #togglemenu .container ul li a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 18px 30px;
+}
+
+body header .navbar #togglemenu .container ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
+body main {
+  position: relative;
+  z-index: 500;
+}
+
 body main .name {
   -webkit-box-flex: 2;
       -ms-flex: 2;
@@ -130,6 +222,8 @@ body footer .single-row .redaction {
 }
 
 body footer .single-row .reseaux a {
+  position: relative;
+  z-index: 800;
   color: white;
   font-size: 24px;
   margin: 0px 10px;

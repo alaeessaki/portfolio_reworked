@@ -1,0 +1,5 @@
+@media screen and (max-width: 992px) {
+    body header .navbar span {
+        display: block !important;
+    }
+}

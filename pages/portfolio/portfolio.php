@@ -16,6 +16,7 @@ require "../../admin/Database.php";
     <!--Main-->
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="../../node_modules/sal.js/dist/sal.css">
+    <link rel="stylesheet" href="css/portfolio-media.css">
 
     <title>Portfolio</title>
 </head>
@@ -26,9 +27,8 @@ require "../../admin/Database.php";
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="../../index.php">AE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
+
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mr-4">
@@ -36,7 +36,7 @@ require "../../admin/Database.php";
                         <a class="nav-link hov" href="../../index.php">Home</a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="about.html">About</a>
+                        <a class="nav-link hov" href="../../pages/about/about.html">About</a>
                     </li>
                     <li class="nav-item mr-4">
                         <a class="nav-link hov" href="../../pages/portfolio/portfolio.php">Portfolio</a>
@@ -46,10 +46,29 @@ require "../../admin/Database.php";
                     </li>
                 </ul>
             </div>
+            <div class="plash" onclick="menuClose()"></div>
+            <div id="togglemenu">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="../../index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="../about/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="../portfolio/portfolio.php">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="../contact/contact.php">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
+    <main class="portfolio-main">
         <div class="categories">
             <ul class="navs-list d-flex flex-row flex-wrap justify-content-center text-uppercase align-items-center">
                 <li class="navs-item cat mr-5 mt-5 active" data-target="all">All</li>
@@ -70,7 +89,7 @@ require "../../admin/Database.php";
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Database::disconnect();
                 ?>
-                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-start">
+                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
                     <?php foreach ($rows as $row) : ?>
                         <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 20rem;" data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                             <img class="card-img-top" src="../../assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getprj('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -89,7 +108,7 @@ require "../../admin/Database.php";
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Database::disconnect();
                 ?>
-                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-start">
+                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center  align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
                     <?php foreach ($rows as $row) : ?>
                         <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 20rem;" data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                             <img class="card-img-top" src="../../assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getprj('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -108,7 +127,7 @@ require "../../admin/Database.php";
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Database::disconnect();
                 ?>
-                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-start">
+                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center  align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
                     <?php foreach ($rows as $row) : ?>
                         <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 20rem;" data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                             <img class="card-img-top" src="../../assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getprj('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -127,7 +146,7 @@ require "../../admin/Database.php";
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Database::disconnect();
                 ?>
-                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-start">
+                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center  align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
                     <?php foreach ($rows as $row) : ?>
                         <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 20rem;" data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                             <img class="card-img-top" src="../../assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getprj('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -146,7 +165,7 @@ require "../../admin/Database.php";
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Database::disconnect();
                 ?>
-                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-start">
+                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center  align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
                     <?php foreach ($rows as $row) : ?>
                         <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 20rem;" data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                             <img class="card-img-top" src="../../assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getprj('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -165,7 +184,7 @@ require "../../admin/Database.php";
                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 Database::disconnect();
                 ?>
-                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center align-items-start">
+                <div class="project-container d-flex flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row flex-wrap justify-content-center  align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
                     <?php foreach ($rows as $row) : ?>
                         <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 20rem;" data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                             <img class="card-img-top" src="../../assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getprj('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -244,6 +263,7 @@ require "../../admin/Database.php";
     <!--Main Js-->
     <script src="../../node_modules/sal.js/dist/sal.js"></script>
     <script src="js/portfolio.js"></script>
+
 </body>
 
 </html>

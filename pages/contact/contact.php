@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <!-- Main css -->
   <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/contact-media.css">
 
   <title>Contact</title>
 </head>
@@ -39,9 +40,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="../../index.php">AE</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-4">
@@ -59,48 +58,29 @@
           </li>
         </ul>
       </div>
+      <div class="plash" onclick="menuClose()"></div>
+      <div id="togglemenu">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="../../index.php">Home</a>
+            </li>
+            <li>
+              <a href="../about/about.html">About</a>
+            </li>
+            <li>
+              <a href="../portfolio/portfolio.php">Portfolio</a>
+            </li>
+            <li>
+              <a href="../contact/contact.php">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
-  <main class="m-sm-1 m-md-5 m-1 mt-5">
-
-    <!-- <form action="sendmail.php" method="POST">
-      <div class="form-group">
-        <label for="exampleInputEmail1">From</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-user"></i></span>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary" name="submit">Submit</button>
-    </form> -->
-
-    <!-- <div class="contact-cont d-flex flex-column justify-content-center align-items-center">
-      <div class="title pl-5 pr-5 mb-5 pb-2">
-        <h1>Contact me</h1>
-      </div>
-      <form action="sendmail.php" method="POST" role="form">
-        <div class="form-group d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row justify-content-center align-items-center">
-          <label for="inputEmail" class="col-sm-2 col-form-label title2">From</label>
-          <div class="col-sm-10 input-group">
-            <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com" name="useremail">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroupPrepend"><i class="fas fa-user"></i></span>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div> -->
-
-
+  <main class="m-sm-1 m-md-5 m-1 mt-5 contact-main">
     <div class="contact-cont d-flex flex-column justify-content-center align-items-center">
       <div class="title pl-5 pr-5 mb-5 pb-2">
         <h1>Contact me</h1>

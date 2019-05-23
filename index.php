@@ -21,6 +21,7 @@ Database::disconnect();
     <link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <!--Main-->
     <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/home-media.css">
     <!-- font awsome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/sal.js/dist/sal.css">
@@ -34,9 +35,7 @@ Database::disconnect();
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.php" data-sal="fade" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">AE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent" data-sal="slide-down" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                 <ul class="navbar-nav ml-auto mr-4">
@@ -53,6 +52,25 @@ Database::disconnect();
                         <a class="nav-link spec" href="pages/contact/contact.php">Contact</a>
                     </li>
                 </ul>
+            </div>
+            <div class="plash" onclick="menuClose()"></div>
+            <div id="togglemenu">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="pages/about/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="pages/portfolio/portfolio.php">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="pages/contact/contact.php">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -114,7 +132,7 @@ Database::disconnect();
                     UML -<br>
                     MERISE -<br>
                     MS PROJECT -<br>
-                    PROGRAMING LANGUAGES/TECHNOLOGIES:<br>
+                    PROGRAMING LANGUAGES/<br>TECHNOLOGIES:<br>
                     PHP 5,7 -<br>
                     SQL -<br>
                 </p>
@@ -159,7 +177,7 @@ Database::disconnect();
             </div>
 
             <!-- cards -->
-            <div class="work-cont d-flex justify-content-center align-items-start flex-row flex-wrap position-relative">
+            <div class="work-cont d-flex justify-content-center flex-row flex-wrap position-relative">
                 <?php foreach ($rows as $row) : ?>
                     <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 18rem;" data-sal="slide-down" data-sal-delay="100" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                         <img class="card-img-top" src="assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getrow('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
@@ -280,6 +298,7 @@ Database::disconnect();
 
     <script src="node_modules/sal.js/dist/sal.js"></script>
     <script src="dist/js/main.js"></script>
+    <script src="dist/js/menu.js"></script>
 
 
 </body>

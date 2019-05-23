@@ -13,6 +13,8 @@
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!-- Main css -->
     <link rel="stylesheet" href="css/about.css">
+    <!-- <link rel="stylesheet" href="css/home-media.css"> -->
+    <link rel="stylesheet" href="css/about-media.css">
     <link rel="stylesheet" href="../../node_modules/sal.js/dist/sal.css">
     <title>About</title>
 </head>
@@ -22,10 +24,8 @@
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg" data-sal="slide-down" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
             <a class="navbar-brand" href="../../index.php">AE</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
+
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mr-4">
@@ -42,6 +42,25 @@
                         <a class="nav-link spec" href="../../pages/contact/contact.php">Contact</a>
                     </li>
                 </ul>
+            </div>
+            <div class="plash" onclick="menuClose()"></div>
+            <div id="togglemenu">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="../../index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="../about/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="../portfolio/portfolio.php">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="../contact/contact.php">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -94,6 +113,7 @@
     <!--Main Js-->
     <script src="../../node_modules/sal.js/dist/sal.js"></script>
     <script src="js/about.js"></script>
+    <script src="../../dist/js/menu.js"></script>
     
 </body>
 
