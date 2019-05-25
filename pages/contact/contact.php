@@ -30,55 +30,57 @@
   <!-- Main css -->
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/contact-media.css">
+  <link rel="stylesheet" href="../../dist/css/loader.css">
 
   <title>Contact</title>
 </head>
 
 <body>
 
-  <header>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="../../index.php">AE</a>
-      <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
+<header>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg" data-sal="slide-down" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
+            <a class="navbar-brand" href="../../index.php">AE</a>
+            <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mr-4">
-          <li class="nav-item mr-4">
-            <a class="nav-link hov" href="../../index.php">Home</a>
-          </li>
-          <li class="nav-item mr-4">
-            <a class="nav-link hov" href="../../pages/about/about.html">About</a>
-          </li>
-          <li class="nav-item mr-4">
-            <a class="nav-link hov" href="../portfolio/portfolio.php">Portfolio</a>
-          </li>
-          <li class="nav-item mr-4">
-            <a class="nav-link spec" href="contact.php">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="plash" onclick="menuClose()"></div>
-      <div id="togglemenu">
-        <div class="container">
-          <ul>
-            <li>
-              <a href="../../index.php">Home</a>
-            </li>
-            <li>
-              <a href="../about/about.html">About</a>
-            </li>
-            <li>
-              <a href="../portfolio/portfolio.php">Portfolio</a>
-            </li>
-            <li>
-              <a href="../contact/contact.php">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-4">
+                    <li class="nav-item mr-4">
+                        <a class="nav-link hov" href="../../index.php">Home</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link hov" href="../../pages/about/about.html">About</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link hov" href="../../pages/portfolio/portfolio.php">Portfolio</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link spec" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="plash" onclick="menuClose()"></div>
+            <div id="togglemenu">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <a href="../../index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="../about/about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="../portfolio/portfolio.php">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="../contact/contact.php">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
   <main class="m-sm-1 m-md-5 m-1 mt-5 contact-main">
     <div class="contact-cont d-flex flex-column justify-content-center align-items-center">
@@ -131,29 +133,29 @@
   <!-- footer section -->
 
   <footer>
-    <div class="single-row d-flex justify-content-center align-items-center flex-column">
-      <div class="logo">
-        <a href="#">AE</a>
-      </div>
-      <div class="redaction mt-4">
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetuer<br>
-          adipiscing elit, sed diam nonummy.</p>
-      </div>
+        <div class="single-row d-flex justify-content-center align-items-center flex-column">
+            <div class="logo">
+                <a href="#">AE</a>
+            </div>
+            <div class="redaction mt-4">
+                <p class="text-center">email : alaeessaki@gmail.com<br>Num : +2126 93 43 80 16</p>
+            </div>
 
-      <div class="reseaux d-flex flex-row flex-sm-wrap flex-md-wrap mt-4">
-        <a href="#"><i class="fab fa-facebook-square"></i></a>
-        <a href="#"><i class="fab fa-github-square"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-twitter-square"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+            <div class="reseaux d-flex flex-row flex-sm-wrap flex-md-wrap mt-4">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-github-square"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
 
-      <!-- Copyright -->
-      <div class="copyrights mt-5">
-        <p>copyrights &copy; 2019: <a href="#">Alae ES-SAKI</a></p>
-      </div>
-    </div>
-  </footer>
+            <!-- Copyright -->
+            <div class="copyrights mt-5">
+                <p>copyrights &copy; 2019: <a href="#">Alae ES-SAKI</a></p>
+            </div>
+        </div>
+    </footer>
+
 
   <!--other Libraries-->
   <script src="../../lib/jQuery-3-4-1/jquery-3.4.1.min.js"></script>
@@ -162,6 +164,11 @@
 
   <!--Main Js-->
   <script src="js/contact.js"></script>
+  <script src="../../dist/js/loader.js"></script>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 </body>
 
 </html>

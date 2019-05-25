@@ -17,15 +17,15 @@ require "../../admin/Database.php";
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="../../node_modules/sal.js/dist/sal.css">
     <link rel="stylesheet" href="css/portfolio-media.css">
+    <link rel="stylesheet" href="../../dist/css/loader.css">
 
     <title>Portfolio</title>
 </head>
 
 <body>
-
-    <header>
+<header>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg" data-sal="slide-down" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
             <a class="navbar-brand" href="../../index.php">AE</a>
             <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
 
@@ -39,7 +39,7 @@ require "../../admin/Database.php";
                         <a class="nav-link hov" href="../../pages/about/about.html">About</a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="../../pages/portfolio/portfolio.php">Portfolio</a>
+                        <a class="nav-link hov" href="portfolio.php">Portfolio</a>
                     </li>
                     <li class="nav-item mr-4">
                         <a class="nav-link spec" href="../../pages/contact/contact.php">Contact</a>
@@ -233,8 +233,7 @@ require "../../admin/Database.php";
                 <a href="#">AE</a>
             </div>
             <div class="redaction mt-4">
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetuer<br>
-                    adipiscing elit, sed diam nonummy.</p>
+                <p class="text-center">email : alaeessaki@gmail.com<br>Num : +2126 93 43 80 16</p>
             </div>
 
             <div class="reseaux d-flex flex-row flex-sm-wrap flex-md-wrap mt-4">
@@ -255,6 +254,7 @@ require "../../admin/Database.php";
 
 
 
+
     <!--other Libraries-->
     <script src="../../lib/jQuery-3-4-1/jquery-3.4.1.min.js"></script>
     <script src="../../lib/popper/popper.min.js"></script>
@@ -263,6 +263,11 @@ require "../../admin/Database.php";
     <!--Main Js-->
     <script src="../../node_modules/sal.js/dist/sal.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="../../dist/js/loader.js"></script>
+
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
 
 </body>
 

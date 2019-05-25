@@ -12,7 +12,7 @@
 }
 @media screen and (max-width: 1200px) {
     body .cards-container .single-row .single-sec .tl-spec {
-        margin-top: 80px !important;
+        margin-top: 136px !important;
     }
     
 }
@@ -38,16 +38,13 @@
 /* Small Mobile */
 @media screen and (max-width: 321px) {
     body .cards-container .single-row .single-sec .tl-spec {
-        margin-top: 140px !important;
+        margin-top: 222px !important;
     }
     body .cards-container .single-row .single-sec .title-left {
         margin-top: 41px;
     }
     body .cards-container .single-row .single-sec .t-spec {
         margin-top: 13%;
-    }
-    body .cards-container .single-row .single-sec .tl-spec {
-        margin-top: 174px !important;
     }
     body header .first-section .pres h4 {
         font-size: 12px;

@@ -193,7 +193,7 @@ body{
         .right-brand{
             position: absolute;
             right:10px;
-            bottom: 10%;
+            bottom: 11%;
             p{
                 transform: rotate(-90deg);
                 position: absolute;
@@ -224,6 +224,39 @@ body{
             img{
                 width:30px;
                 height:30px;
+            }
+        }
+        .dropleft{
+            font-family: "Lato Medium";
+            position: fixed;
+            right:15px;
+            bottom: 10px;
+            z-index: 10;
+            border: 1px solid black;
+            border-radius: unset;
+            button{
+                border: 1px solid black;
+                border-radius: unset;
+                background-color: white;
+                color: black;
+                font-size: 12px;
+                &:hover{
+                    background-color: white;
+                    color:black;
+                }
+            }
+            .dropdown-menu{
+                transform: translate3d(-163px, -36px, 0px) !important;
+                border: 1px solid black;
+                border-radius: unset;
+                form{
+                    a{
+                        font-size: 12px;
+                        &:hover{
+                            background-color: unset;
+                        }
+                    }
+                }
             }
         }
     }
@@ -285,9 +318,11 @@ body{
                 
                 .title-right{
                     margin-left: 5%;
+                    margin-top:20px;
                 }
                 .title-left{
                     margin-right: 5%;
+                    margin-top:20px;
                 }
                 hr{
                     margin-top: 63px;
@@ -325,7 +360,7 @@ body{
         margin-top: 10rem !important;
         .single-row{
             .work-cont{
-                    padding: 10px 120px;
+                padding: 10px 7px;
                 .card{
                     border:0 !important;
                     border-radius: 0 !important;
@@ -372,9 +407,6 @@ body{
                 .modal-content{
                     .modal-header{
                         border:none;
-                        button{
-                            
-                        }
                     }
                     .modal-body{
                         img{
@@ -498,5 +530,9 @@ body{
         }
     }
 }
-
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
 

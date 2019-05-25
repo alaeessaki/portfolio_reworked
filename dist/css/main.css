@@ -224,7 +224,7 @@ body header .first-section .pres div a:hover {
 body header .right-brand {
   position: absolute;
   right: 10px;
-  bottom: 10%;
+  bottom: 11%;
 }
 
 body header .right-brand p {
@@ -260,6 +260,44 @@ body header .right-brand hr {
 body header .right-brand img {
   width: 30px;
   height: 30px;
+}
+
+body header .dropleft {
+  font-family: "Lato Medium";
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  z-index: 10;
+  border: 1px solid black;
+  border-radius: unset;
+}
+
+body header .dropleft button {
+  border: 1px solid black;
+  border-radius: unset;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+}
+
+body header .dropleft button:hover {
+  background-color: white;
+  color: black;
+}
+
+body header .dropleft .dropdown-menu {
+  -webkit-transform: translate3d(-163px, -36px, 0px) !important;
+          transform: translate3d(-163px, -36px, 0px) !important;
+  border: 1px solid black;
+  border-radius: unset;
+}
+
+body header .dropleft .dropdown-menu form a {
+  font-size: 12px;
+}
+
+body header .dropleft .dropdown-menu form a:hover {
+  background-color: unset;
 }
 
 body .decription-section {
@@ -330,10 +368,12 @@ body .cards-container .single-row .single-sec .tl-spec {
 
 body .cards-container .single-row .single-sec .title-right {
   margin-left: 5%;
+  margin-top: 20px;
 }
 
 body .cards-container .single-row .single-sec .title-left {
   margin-right: 5%;
+  margin-top: 20px;
 }
 
 body .cards-container .single-row .single-sec hr {
@@ -376,7 +416,7 @@ body .recent-work {
 }
 
 body .recent-work .single-row .work-cont {
-  padding: 10px 120px;
+  padding: 10px 7px;
 }
 
 body .recent-work .single-row .work-cont .card {
@@ -559,5 +599,11 @@ body footer .single-row .copyrights {
 body footer .single-row .copyrights a {
   text-decoration: none;
   color: white;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 /*# sourceMappingURL=main.css.map */
