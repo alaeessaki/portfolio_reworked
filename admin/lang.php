@@ -39,7 +39,8 @@ $lang = array (
         'whaticandoli2'=>'Assist with production of clean and functional design',
         'whaticandoli3'=>'Bridge communication gap between designers and developers',
         'whaticandoli4'=>'I’m a full-stack developer which means I can bring your project from concept to completion.',
-        'contactme'=>'contact-me'
+        'contactme'=>'contact-me',
+        'modal'=>array('technologies used','close','github link')
     ),
     'fr'=>array(
         'menu'=>array('Accueil','Sur-moi','portfolio','contact'),
@@ -79,6 +80,7 @@ $lang = array (
         'whaticandoli2'=>'Aider à la production d\'un design épuré et fonctionnel',
         'whaticandoli3'=>'combler l\'écart de communication entre les concepteurs et les développeurs',
         'whaticandoli4'=>'Je suis un développeur full-stack, ce qui signifie que je peux mener votre projet de la conception à la réalisation.',
-        'contactme'=>'Contactez moi'
+        'contactme'=>'Contactez moi',
+        'modal'=>array('technologies utilisées','Fermer','lien github')
     )
 );

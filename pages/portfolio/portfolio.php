@@ -1,5 +1,12 @@
 <?php
 require "../../admin/Database.php";
+include "lang.php";
+
+$default_lang = 'eng';
+
+if(isset($_GET['lang'])){
+    $default_lang = $_GET['lang'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,16 +40,16 @@ require "../../admin/Database.php";
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mr-4">
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="../../index.php">Home</a>
+                        <a class="nav-link hov" href="../../index.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][0] ?></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="../../pages/about/about.html">About</a>
+                        <a class="nav-link hov" href="../../pages/about/about.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][1] ?></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="portfolio.php">Portfolio</a>
+                        <a class="nav-link hov" href="portfolio.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][2] ?></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link spec" href="../../pages/contact/contact.php">Contact</a>
+                        <a class="nav-link spec" href="../../pages/contact/contact.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][3] ?></a>
                     </li>
                 </ul>
             </div>
@@ -51,16 +58,16 @@ require "../../admin/Database.php";
                 <div class="container">
                     <ul>
                         <li>
-                            <a href="../../index.php">Home</a>
+                            <a href="../../index.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][0] ?></a>
                         </li>
                         <li>
-                            <a href="../about/about.html">About</a>
+                            <a href="../about/about.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][1] ?></a>
                         </li>
                         <li>
-                            <a href="../portfolio/portfolio.php">Portfolio</a>
+                            <a href="../portfolio/portfolio.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][2] ?></a>
                         </li>
                         <li>
-                            <a href="../contact/contact.php">Contact</a>
+                            <a href="../contact/contact.php?lang=<?=$default_lang?>"><?= $lang[$default_lang]['menu'][3] ?></a>
                         </li>
                     </ul>
                 </div>
@@ -71,12 +78,12 @@ require "../../admin/Database.php";
     <main class="portfolio-main">
         <div class="categories">
             <ul class="navs-list d-flex flex-row flex-wrap justify-content-center text-uppercase align-items-center">
-                <li class="navs-item cat mr-5 mt-5 active" data-target="all">All</li>
-                <li class="navs-item cat mr-5 mt-5" data-target="website">Website</li>
-                <li class="navs-item cat mr-5 mt-5" data-target="mobileapp">Mobile app</li>
-                <li class="navs-item cat mr-5 mt-5" data-target="webapp">Web-app</li>
-                <li class="navs-item cat mr-5 mt-5" data-target="game">Game</li>
-                <li class="navs-item cat mr-5 mt-5" data-target="others">Others</li>
+                <li class="navs-item cat mr-5 mt-5 active" data-target="all"><?= $lang[$default_lang]['cat'][0] ?></li>
+                <li class="navs-item cat mr-5 mt-5" data-target="website"><?= $lang[$default_lang]['cat'][1] ?></li>
+                <li class="navs-item cat mr-5 mt-5" data-target="mobileapp"><?= $lang[$default_lang]['cat'][2] ?></li>
+                <li class="navs-item cat mr-5 mt-5" data-target="webapp"><?= $lang[$default_lang]['cat'][3] ?></li>
+                <li class="navs-item cat mr-5 mt-5" data-target="game"><?= $lang[$default_lang]['cat'][4] ?></li>
+                <li class="navs-item cat mr-5 mt-5" data-target="others"><?= $lang[$default_lang]['cat'][5] ?></li>
             </ul>
         </div>
 
@@ -209,19 +216,30 @@ require "../../admin/Database.php";
                             <h3 class="text-center mb-5" id="mtitle"></h3>
                             <img class="mb-5" src="#" id="mimg">
                             <p class="mb-5" id="mdesc"></p>
-                            <h5>technologies used :</h5>
+                            <h5><?= $lang[$default_lang]['modal'][0] ?></h5>
                             <h6 id="mtech"></h6>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn" data-dismiss="modal"><?= $lang[$default_lang]['modal'][1] ?></button>
                             <a href="" id="mlink">
-                                <button type="button" class="btn">Go to github page<i class="fab fa-github-square" style="padding-left: .6rem;"></i></button>
+                                <button type="button" class="btn"><?= $lang[$default_lang]['modal'][2] ?><i class="fab fa-github-square" style="padding-left: .6rem;"></i></button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="btn-group dropleft shadow-none" data-sal="slide-left" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">
+            <button class="btn btn-secondary dropdown-toggle shadow-none" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Lang
+            </button>
+            <div class="dropdown-menu shadow-none" aria-labelledby="dropdownMenuButton">
+                <form action="" method="GET">
+                    <a class="dropdown-item" href="portfolio.php?lang=eng">ENGLISH</a>
+                    <a class="dropdown-item text-uppercase" href="portfolio.php?lang=fr">Français</a>
+                </form>
+            </div>
+        </div>
     </main>
 
 
@@ -235,13 +253,16 @@ require "../../admin/Database.php";
             <div class="redaction mt-4">
                 <p class="text-center">email : alaeessaki@gmail.com<br>Num : +2126 93 43 80 16</p>
             </div>
+            <div class="barcode">
+                <img src="../../assets/imgs/frame.png">
+            </div>
 
             <div class="reseaux d-flex flex-row flex-sm-wrap flex-md-wrap mt-4">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-github-square"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/alae.essaki1"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://github.com/alaeessaki?tab=repositories"><i class="fab fa-github-square"></i></a>
+                <a href="https://www.linkedin.com/in/alae-essaki-15485016a/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/es_alae"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/alaeessaki/"><i class="fab fa-instagram"></i></a>
             </div>
 
             <!-- Copyright -->

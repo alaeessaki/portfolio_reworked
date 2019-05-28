@@ -13,6 +13,9 @@ Database::disconnect();
 // Language
 $default_lang = "eng";
 if (isset($_GET['lang'])) {
+    $default_lang = $_GET['lang'];
+}
+if (isset($_GET['lang'])) {
     if ($_GET['lang'] == 'eng') {
         $default_lang = "eng";
     }
@@ -42,6 +45,8 @@ if (isset($_GET['lang'])) {
     <link rel="stylesheet" href="node_modules/sal.js/dist/sal.css">
 
     <title>Portfolio</title>
+    <meta name="description" content="I'M ALAE ES-SAKI, I'M A FULL STACK WEB DEVELOPER PASSIONATE ABOUT PRODUCING HIGH QUALITY RESPONSIVE WEBSITES AND EXCEPTIONAL USER EXPERIENCE.YOU CAN CHECK MY GITHUB TO SEE MY PROJECTS, AND IF YOU WANT TO KNOW MORE ABOUT ME YOU CAN VISITE ABOUT SECTION.">
+    <meta name="keywords" content="Developpeur Web, Création des sites web, service web, responsive designe, service de designe,web design, custom web design services, web design services, web design studio, web design boutique, web design solutions, responsive web design services, brochure design services, logo design, web design for startups, web design for small businesses, cheap website design, inexpensive web design">
 </head>
 
 <body>
@@ -55,16 +60,16 @@ if (isset($_GET['lang'])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent" data-sal="slide-down" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                 <ul class="navbar-nav ml-auto mr-4">
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="index.php"><?= $lang[$default_lang]['menu'][0] ?></a>
+                        <a class="nav-link hov" href="index.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][0] ?></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="pages/about/about.html"><?= $lang[$default_lang]['menu'][1] ?></a>
+                        <a class="nav-link hov" href="pages/about/about.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][1] ?></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link hov" href="pages/portfolio/portfolio.php"><?= $lang[$default_lang]['menu'][2] ?></a>
+                        <a class="nav-link hov" href="pages/portfolio/portfolio.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][2] ?></a>
                     </li>
                     <li class="nav-item mr-4">
-                        <a class="nav-link spec" href="pages/contact/contact.php"><?= $lang[$default_lang]['menu'][3] ?></a>
+                        <a class="nav-link spec" href="pages/contact/contact.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][3] ?></a>
                     </li>
                 </ul>
             </div>
@@ -73,16 +78,16 @@ if (isset($_GET['lang'])) {
                 <div class="container">
                     <ul>
                         <li>
-                            <a href="index.php"><?= $lang[$default_lang]['menu'][0] ?></a>
+                            <a href="index.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][0] ?></a>
                         </li>
                         <li>
-                            <a href="pages/about/about.html"><?= $lang[$default_lang]['menu'][1] ?></a>
+                            <a href="pages/about/about.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][1] ?></a>
                         </li>
                         <li>
-                            <a href="pages/portfolio/portfolio.php"><?= $lang[$default_lang]['menu'][2] ?></a>
+                            <a href="pages/portfolio/portfolio.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][2] ?></a>
                         </li>
                         <li>
-                            <a href="pages/contact/contact.php"><?= $lang[$default_lang]['menu'][3] ?></a>
+                            <a href="pages/contact/contact.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['menu'][3] ?></a>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +104,7 @@ if (isset($_GET['lang'])) {
                     <br data-sal="slide-up" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['title2'] ?></h4>
                 <div class="d-flex justify-content-center">
                     <a class="p-4" href="https://drive.google.com/file/d/1egZS-PLDdvIgSE_qYnr_E36zxs4oG0e3/view" data-sal="slide-right" data-sal-delay="400" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['btn1'] ?></a>
-                    <a class="p-4" href="#" data-sal="slide-left" data-sal-delay="400" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['btn2'] ?></a>
+                    <a class="p-4" href="pages/contact/contact.php?lang=<?= $default_lang ?>" data-sal="slide-left" data-sal-delay="400" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['btn2'] ?></a>
                 </div>
             </div>
         </div>
@@ -131,7 +136,7 @@ if (isset($_GET['lang'])) {
         <div class="single-row" data-sal="fade" data-sal-delay="50" data-sal-easing="ease-out-bounce" data-sal-duration="800">
             <h4><?= $lang[$default_lang]['aboutmetitle'] ?></h4>
             <p><?= $lang[$default_lang]['aboutmepara'] ?></p>
-            <a href="pages/about/about.html" data-sal="slide-left" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['btn3'] ?></a>
+            <a href="pages/about/about.php?lang=<?= $default_lang ?>" data-sal="slide-left" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['btn3'] ?></a>
         </div>
     </section>
 
@@ -142,48 +147,48 @@ if (isset($_GET['lang'])) {
                 <h3 class="title-right" data-sal="slide-left" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['cmptitle'][0] ?></h3>
                 <hr>
                 <p class="right" data-sal="slide-left" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
-                <?= $lang[$default_lang]['comppara'][0][0] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][1] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][2] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][3] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][4] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][5] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][6] ?><br>
-                <?= $lang[$default_lang]['comppara'][0][7] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][0] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][1] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][2] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][3] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][4] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][5] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][6] ?><br>
+                    <?= $lang[$default_lang]['comppara'][0][7] ?><br>
                 </p>
             </div>
             <div class="single-sec">
                 <h3 class="title-left" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['cmptitle'][1] ?></h3>
                 <hr>
                 <p class="left text-right" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
-                <?= $lang[$default_lang]['comppara'][1][0] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][1] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][2] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][3] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][4] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][5] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][6] ?><br>
-                <?= $lang[$default_lang]['comppara'][1][7] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][0] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][1] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][2] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][3] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][4] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][5] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][6] ?><br>
+                    <?= $lang[$default_lang]['comppara'][1][7] ?><br>
                 </p>
             </div>
             <div class="single-sec">
                 <h3 class="title-right t-spec" data-sal="slide-left" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['cmptitle'][2] ?></h3>
                 <hr class="hrspec">
                 <p class="right p-spec" data-sal="slide-left" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
-                <?= $lang[$default_lang]['comppara'][2] ?>
+                    <?= $lang[$default_lang]['comppara'][2] ?>
                 </p>
             </div>
             <div class="single-sec">
                 <h3 class="title-left tl-spec" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['cmptitle'][3] ?></h3>
                 <hr>
                 <p class="left text-right text-uppercase" data-sal="slide-right" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
-                <?= $lang[$default_lang]['comppara'][3][0] ?><br>
-                <?= $lang[$default_lang]['comppara'][3][1] ?><br>
-                <?= $lang[$default_lang]['comppara'][3][2] ?><br>
-                <?= $lang[$default_lang]['comppara'][3][3] ?><br>
-                <?= $lang[$default_lang]['comppara'][3][4] ?><br>
-                <?= $lang[$default_lang]['comppara'][3][5] ?><br>
-                <?= $lang[$default_lang]['comppara'][3][6] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][0] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][1] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][2] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][3] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][4] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][5] ?><br>
+                    <?= $lang[$default_lang]['comppara'][3][6] ?><br>
                 </p>
             </div>
         </div>
@@ -201,7 +206,7 @@ if (isset($_GET['lang'])) {
                 <?php foreach ($rows as $row) : ?>
                     <div class="card mr-sm-0 mr-md-5 mr-lg-5 mr-xl-5 mb-5 position-relative" style="width: 18rem;" data-sal="slide-down" data-sal-delay="100" data-sal-easing="ease-out-bounce" data-sal-duration="800">
                         <img class="card-img-top" src="assets/projects-imgs/<?= $row['image'] ?>" data-toggle="modal" data-target="#exampleModal" onclick="getrow('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">
-                        <p class="vplus position-absolute" data-toggle="modal" data-target="#exampleModal" onclick="getrow('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')">See More</p>
+                        <p class="vplus position-absolute" data-toggle="modal" data-target="#exampleModal" onclick="getrow('<?= $row['name'] ?>','<?= $row['image'] ?>','<?= $row['description'] ?>','<?= $row['technologies'] ?>','<?= $row['github'] ?>')"><?= $lang[$default_lang]['seemore'] ?></p>
                         <a class="text-decoration-none p-1 d-flex align-items-center justify-content-center" href="<?= $row['github'] ?>">
                             <p class="m-0">github source <i class="fab fa-github-square"></i> </p>
                         </a>
@@ -222,13 +227,13 @@ if (isset($_GET['lang'])) {
                             <h3 class="text-center mb-5" id="mtitle"></h3>
                             <img class="mb-5" src="#" id="mimg">
                             <p class="mb-5" id="mdesc"></p>
-                            <h5>technologies used :</h5>
+                            <h5><?= $lang[$default_lang]['modal'][0] ?></h5>
                             <h6 id="mtech"></h6>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn" data-dismiss="modal"><?= $lang[$default_lang]['modal'][1] ?></button>
                             <a href="" id="mlink">
-                                <button type="button" class="btn">Go to github page<i class="fab fa-github-square" style="padding-left: .6rem;"></i></button>
+                                <button type="button" class="btn"><?= $lang[$default_lang]['modal'][2] ?><i class="fab fa-github-square" style="padding-left: .6rem;"></i></button>
                             </a>
                         </div>
                     </div>
@@ -258,7 +263,7 @@ if (isset($_GET['lang'])) {
 
             <!-- See more button -->
             <div class="af-suite text-center mb-5 mt-5">
-                <a href="pages/portfolio/portfolio.php"><?= $lang[$default_lang]['seemore'] ?></a>
+                <a href="pages/portfolio/portfolio.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['seemore'] ?></a>
             </div>
         </div>
     </section>
@@ -268,15 +273,15 @@ if (isset($_GET['lang'])) {
         <div class="single-row">
 
             <div class="red-sec d-flex flex-column justify-content-center align-items-center p-5">
-                <h5 class="text-center mb-md-5 mb-lg-5 mb-xl-5" data-sal="slide-down" data-sal-delay="100" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['whaticando']?></h5>
+                <h5 class="text-center mb-md-5 mb-lg-5 mb-xl-5" data-sal="slide-down" data-sal-delay="100" data-sal-easing="ease-out-bounce" data-sal-duration="800"><?= $lang[$default_lang]['whaticando'] ?></h5>
                 <ul data-sal="slide-right" data-sal-delay="100" data-sal-easing="ease-out-bounce" data-sal-duration="800">
-                    <li><?= $lang[$default_lang]['whaticandoli1']?></li>
-                    <li><?= $lang[$default_lang]['whaticandoli2']?></li>
-                    <li><?= $lang[$default_lang]['whaticandoli3']?></li>
-                    <li><?= $lang[$default_lang]['whaticandoli4']?></li>
+                    <li><?= $lang[$default_lang]['whaticandoli1'] ?></li>
+                    <li><?= $lang[$default_lang]['whaticandoli2'] ?></li>
+                    <li><?= $lang[$default_lang]['whaticandoli3'] ?></li>
+                    <li><?= $lang[$default_lang]['whaticandoli4'] ?></li>
                 </ul>
                 <div class="button">
-                    <a href="#"><?= $lang[$default_lang]['contactme']?></a>
+                    <a href="pages/contact/contact.php?lang=<?= $default_lang ?>"><?= $lang[$default_lang]['contactme'] ?></a>
                 </div>
             </div>
         </div>
@@ -293,14 +298,18 @@ if (isset($_GET['lang'])) {
                 <p class="text-center">email : alaeessaki@gmail.com<br>Num : +2126 93 43 80 16</p>
             </div>
 
-            <div class="reseaux d-flex flex-row flex-sm-wrap flex-md-wrap mt-4">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-github-square"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+            <div class="barcode">
+                <img src="assets/imgs/frame.png">
             </div>
 
+            <div class="reseaux d-flex flex-row flex-sm-wrap flex-md-wrap mt-4">
+                <a href="https://www.facebook.com/alae.essaki1"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://github.com/alaeessaki?tab=repositories"><i class="fab fa-github-square"></i></a>
+                <a href="https://www.linkedin.com/in/alae-essaki-15485016a/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/es_alae"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/alaeessaki/"><i class="fab fa-instagram"></i></a>
+            </div>
+            
             <!-- Copyright -->
             <div class="copyrights mt-5">
                 <p>copyrights &copy; 2019: <a href="#">Alae ES-SAKI</a></p>

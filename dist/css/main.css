@@ -362,7 +362,7 @@ body .cards-container .single-row .single-sec .t-spec {
 }
 
 body .cards-container .single-row .single-sec .tl-spec {
-  margin-top: 7%;
+  margin-top: 134px !important;
   margin-right: 12% !important;
 }
 
@@ -505,7 +505,7 @@ body .recent-work .single-row .af-suite a {
 
 body .what-i-can-do-sec {
   margin-top: 6rem;
-  background-image: url("../../assets/imgs/clavier.jpg");
+  background-color: black;
   background-size: cover;
 }
 
@@ -584,6 +584,14 @@ body footer .single-row .redaction p::-moz-selection {
 body footer .single-row .redaction p::selection {
   background-color: white !important;
   color: black !important;
+}
+
+body footer .single-row .barcode {
+  width: 10%;
+}
+
+body footer .single-row .barcode img {
+  width: 100%;
 }
 
 body footer .single-row .reseaux a {

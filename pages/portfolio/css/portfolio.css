@@ -203,7 +203,7 @@ body main {
 
 body main .categories .navs-list .navs-item {
   list-style-type: none;
-  font-family: "Lato";
+  font-family: "Lato","Lato Medium";
   font-size: 14px;
   color: black;
   cursor: pointer;
@@ -247,6 +247,44 @@ body main .projects-section .modal-dialog .modal-content .modal-footer a button 
   color: white;
 }
 
+body main .dropleft {
+  font-family: "Lato Medium";
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  z-index: 10;
+  border: 1px solid black;
+  border-radius: unset;
+}
+
+body main .dropleft button {
+  border: 1px solid black;
+  border-radius: unset;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+}
+
+body main .dropleft button:hover {
+  background-color: white;
+  color: black;
+}
+
+body main .dropleft .dropdown-menu {
+  -webkit-transform: translate3d(-163px, -36px, 0px) !important;
+          transform: translate3d(-163px, -36px, 0px) !important;
+  border: 1px solid black;
+  border-radius: unset;
+}
+
+body main .dropleft .dropdown-menu form a {
+  font-size: 12px;
+}
+
+body main .dropleft .dropdown-menu form a:hover {
+  background-color: unset;
+}
+
 body footer {
   margin-top: 9rem;
   background-color: black;
@@ -267,6 +305,14 @@ body footer .single-row .logo a {
 body footer .single-row .redaction {
   color: white;
   font-family: "Lato Medium";
+}
+
+body footer .single-row .barcode {
+  width: 10%;
+}
+
+body footer .single-row .barcode img {
+  width: 100%;
 }
 
 body footer .single-row .reseaux a {

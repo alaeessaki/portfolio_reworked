@@ -246,6 +246,44 @@ body main .contact-cont form button:hover {
   color: white;
 }
 
+body main .dropleft {
+  font-family: "Lato Medium";
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  z-index: 10;
+  border: 1px solid black;
+  border-radius: unset;
+}
+
+body main .dropleft button {
+  border: 1px solid black;
+  border-radius: unset;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+}
+
+body main .dropleft button:hover {
+  background-color: white;
+  color: black;
+}
+
+body main .dropleft .dropdown-menu {
+  -webkit-transform: translate3d(-163px, -36px, 0px) !important;
+          transform: translate3d(-163px, -36px, 0px) !important;
+  border: 1px solid black;
+  border-radius: unset;
+}
+
+body main .dropleft .dropdown-menu form a {
+  font-size: 12px;
+}
+
+body main .dropleft .dropdown-menu form a:hover {
+  background-color: unset;
+}
+
 body footer {
   margin-top: 9rem;
   background-color: black;
@@ -274,6 +312,14 @@ body footer .single-row .reseaux a {
   margin: 0px 10px;
 }
 
+body footer .single-row .barcode {
+  width: 10%;
+}
+
+body footer .single-row .barcode img {
+  width: 100%;
+}
+
 body footer .single-row .copyrights {
   color: white;
 }
@@ -281,5 +327,11 @@ body footer .single-row .copyrights {
 body footer .single-row .copyrights a {
   text-decoration: none;
   color: white;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 /*# sourceMappingURL=contact.css.map */

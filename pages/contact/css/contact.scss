@@ -236,6 +236,39 @@ body {
             }
             
         }
+        .dropleft{
+            font-family: "Lato Medium";
+            position: fixed;
+            right:15px;
+            bottom: 10px;
+            z-index: 10;
+            border: 1px solid black;
+            border-radius: unset;
+            button{
+                border: 1px solid black;
+                border-radius: unset;
+                background-color: white;
+                color: black;
+                font-size: 12px;
+                &:hover{
+                    background-color: white;
+                    color:black;
+                }
+            }
+            .dropdown-menu{
+                transform: translate3d(-163px, -36px, 0px) !important;
+                border: 1px solid black;
+                border-radius: unset;
+                form{
+                    a{
+                        font-size: 12px;
+                        &:hover{
+                            background-color: unset;
+                        }
+                    }
+                }
+            }
+        }
     }
     footer{
         margin-top: 9rem;
@@ -263,6 +296,12 @@ body {
                     margin: 0px 10px;
                 }
             }
+            .barcode{
+                width:10%;
+                img{
+                    width:100%;
+                }
+            }
             .copyrights{
                 color:white;
                 a{
@@ -272,4 +311,9 @@ body {
             }
         }
     }
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: black;
+    background-color: white;
+    border-color: black;
 }
