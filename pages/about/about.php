@@ -34,7 +34,7 @@ if(isset($_GET['lang'])){
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg" data-sal="slide-down" data-sal-delay="300"
             data-sal-easing="ease-out-bounce" data-sal-duration="800">
-            <a class="navbar-brand" href="../../index.php">AE</a>
+            <a class="navbar-brand" href="../../index.php?lang=<?= $default_lang ?>">AE</a>
             <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
 
 

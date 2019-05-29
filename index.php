@@ -10,7 +10,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 Database::disconnect();
 
 
-// Language
+// Default Language
 $default_lang = "eng";
 if (isset($_GET['lang'])) {
     $default_lang = $_GET['lang'];
@@ -32,7 +32,7 @@ if (isset($_GET['lang'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <!-- FavIcon -->
     <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
     <!--Bootstrap-->
     <link rel="stylesheet" href="lib/bootstrap-4.3.1-dist/css/bootstrap.min.css">
@@ -42,11 +42,14 @@ if (isset($_GET['lang'])) {
     <link rel="stylesheet" href="dist/css/loader.css">
     <!-- font awsome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Sal Style -->
     <link rel="stylesheet" href="node_modules/sal.js/dist/sal.css">
 
     <title>Portfolio</title>
+
     <meta name="description" content="I'M ALAE ES-SAKI, I'M A FULL STACK WEB DEVELOPER PASSIONATE ABOUT PRODUCING HIGH QUALITY RESPONSIVE WEBSITES AND EXCEPTIONAL USER EXPERIENCE.YOU CAN CHECK MY GITHUB TO SEE MY PROJECTS, AND IF YOU WANT TO KNOW MORE ABOUT ME YOU CAN VISITE ABOUT SECTION.">
     <meta name="keywords" content="Developpeur Web, Création des sites web, service web, responsive designe, service de designe,web design, custom web design services, web design services, web design studio, web design boutique, web design solutions, responsive web design services, brochure design services, logo design, web design for startups, web design for small businesses, cheap website design, inexpensive web design">
+
 </head>
 
 <body>
@@ -54,7 +57,7 @@ if (isset($_GET['lang'])) {
     <header>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php" data-sal="fade" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">AE</a>
+            <a class="navbar-brand" href="index.php?lang=<?= $default_lang ?>" data-sal="fade" data-sal-delay="150" data-sal-easing="ease-out-bounce" data-sal-duration="800">AE</a>
             <span class="li-spec" onclick="menuToggle()"><i class="fas fa-bars"></i></span>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent" data-sal="slide-down" data-sal-delay="300" data-sal-easing="ease-out-bounce" data-sal-duration="800">
@@ -73,6 +76,8 @@ if (isset($_GET['lang'])) {
                     </li>
                 </ul>
             </div>
+
+            <!-- This splash is for closing the menu in media query -->
             <div class="plash" onclick="menuClose()"></div>
             <div id="togglemenu">
                 <div class="container">
